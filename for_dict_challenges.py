@@ -1,3 +1,5 @@
+from collections import Counter
+
 # Задание 1
 # Дан список учеников, нужно посчитать количество повторений каждого имени ученика
 # Пример вывода:
@@ -12,8 +14,9 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-# ???
-
+names_students = dict(Counter([student['first_name'] for student in students]))
+for name in names_students:
+    print(f"{name}: {names_students[name]}")
 
 # Задание 2
 # Дан список учеников, нужно вывести самое часто повторящееся имя
@@ -26,7 +29,8 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Оля'},
 ]
-# ???
+names_students = [student['first_name'] for student in students]
+print(f"Самое частое имя среди учеников: {max(set(names_students), key = names_students.count)}")
 
 
 # Задание 3
@@ -51,7 +55,7 @@ school_students = [
         {'first_name': 'Саша'},
     ],
 ]
-# ???
+for 
 
 
 # Задание 4
